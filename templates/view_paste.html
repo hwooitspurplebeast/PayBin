@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="view-paste-container">
+    <h1>{{ paste.name }}</h1>
+    <p><strong>Created by:</strong> {{ paste.author }}</p>
+    <p><strong>Content:</strong></p>
+    <div class="content">{{ paste.content }}</div>
+    <p><strong>Views:</strong> {{ paste.views }}</p> <!-- Display the view count -->
+</div>
+{% endblock %}

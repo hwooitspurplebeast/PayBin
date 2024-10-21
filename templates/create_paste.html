@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="create-paste-container">
+    <h1>Create a new Paste</h1>
+    <form method="POST" class="paste-form">
+        <div class="form-group">
+            <label for="paste_name">Paste Name:</label>
+            <input type="text" id="paste_name" name="paste_name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="paste_content">Paste Content:</label>
+            <textarea id="paste_content" name="paste_content" required></textarea>
+        </div>
+
+        <button type="submit" class="button">Create Paste</button>
+    </form>
+</div>
+{% endblock %}

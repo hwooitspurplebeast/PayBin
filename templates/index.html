@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pastebin</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pastebin</h1>
+        <form action="/" method="GET">
+            <input type="text" name="search" placeholder="Search pastes..." required>
+            <button type="submit">Search</button>
+        </form>
+        <h2>Pastes:</h2>
+        <ul>
+            {% for paste in pastes %}
+                <li><a href="{{ url_for('paste', pastename=paste) }}">{{ paste }}</a></li>
+            {% endfor %}
+        </ul>
+        <a href="{{ url_for('create') }}">Create a New Paste</a>
+    </div>
+</body>
+</html>

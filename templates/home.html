@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+    
+    <form method="POST" action="/" class="search-form">
+        <input type="text" name="search_query" placeholder="Search pastes..." required>
+        <button type="submit" class="button">Search</button>
+    </form>
+
+    <h2>Pastes:</h2>
+    <ul>
+        {% for paste in pastes %}
+        <li>
+            <a href="{{ url_for('view_paste', pastename=paste['name']) }}" class="paste-link">{{ paste['name'] }}</a> by {{ paste['author'] }}
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

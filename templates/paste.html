@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="paste-container">
+    <h1>{{ paste_name }}</h1>
+    <pre>{{ paste_content }}</pre>
+    <p><strong>Creator:</strong> {{ creator }}</p>
+    <p><strong>Date:</strong> {{ created_at }}</p>
+</div>
+{% endblock %}
