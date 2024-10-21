@@ -190,4 +190,4 @@ def view_paste(pastename):
     return render_template('view_paste.html', paste=paste_data)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=1000, debug=True)
